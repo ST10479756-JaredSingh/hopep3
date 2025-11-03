@@ -53,4 +53,91 @@ If I had more time, I would:
 ---
 
 ## 🧱 Folder Structure
+hopep3/
+│
+├── css-assests/
+│ ├── aboutus.css
+│ ├── contact.css
+│ ├── donate.css
+│ ├── events.css
+│ ├── home.css
+│ ├── projects.css
+│ ├── resources.css
+│ ├── volunteer.css
+│ └── enquiry.css
+│
+├── js-assts/
+│ ├── form-validation.js
+│ ├── events-dropdown.js
+│ ├── navbar.js
+│ └── main.js
+│
+├── _images/
+│ ├── logo.png
+│ ├── community_garden.jpg
+│ ├── volunteer.jpg
+│ └── ...
+│
+├── screens/
+│ ├── home-page.png
+│ ├── contact-form.png
+│ └── event-registration.png
+│
+├── aboutus.html
+├── contact.html
+├── donate.html
+├── events.html
+├── home.html
+├── projects.html
+├── resources.html
+├── volunteer.html
+├── enquiry.html
+
+
+---
+
+## 🧠 Technologies Used
+
+| Category | Tools |
+|-----------|-------|
+| **Languages** | HTML5, CSS3, JavaScript (ES6) |
+| **Design** | Responsive Grid & Flexbox, Gradients |
+| **SEO** | Meta tags, semantic markup, alt text |
+| **Version Control** | Git & GitHub |
+| **Testing** | W3C Validators, Chrome DevTools |
+
+---
+
+## 🔍 SEO Implementation
+
+| Element | Example |
+|----------|----------|
+| **Title Tags** | `<title>Projects | Hope Harvest Community Garden</title>` |
+| **Meta Description** | `<meta name="description" content="Learn how Hope Harvest grows community and food sustainably.">` |
+| **Meta Keywords** | `<meta name="keywords" content="community garden, sustainability, volunteering, Hope Harvest">` |
+| **Image SEO** | Filenames use keywords (e.g., `volunteer_team.jpg`), and all have descriptive `alt` attributes. |
+
+---
+
+## 🪄 JavaScript Functionality
+
+| JS File | Purpose |
+|----------|----------|
+| **form-validation.js** | Validates user input, checks for empty fields, and provides feedback alerts. |
+| **events-dropdown.js** | Populates dynamic event details based on dropdown selection. |
+| **navbar.js** | Controls responsive hamburger navigation for mobile devices. |
+| **main.js** | Handles general page interactivity and scroll animations. |
+
+### Example:
+```javascript
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (name.value === "" || email.value === "") {
+    alert("Please fill in all fields.");
+  } else {
+    alert("Form submitted successfully!");
+    form.reset();
+  }
+});
+
 
