@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | Hope Harvest Community Garden</title>
+    <meta name="description"
+        content="Support Hope Harvest Community Garden by donating to help grow food, support families, and strengthen our community. Every contribution counts.">
+    <link rel="stylesheet" href="/css-assests/donate.css">
+</head>
+
+<body>
+    <!-- ==============================
+         Header
+    ============================== -->
+    <header>
+        <h1>Hope Harvest Community Garden</h1>
+        <p>Growing food. Growing community. Growing hope.</p>
+    </header>
+
+    <!-- ==============================
+         Navigation
+    ============================== -->
+     <nav>
+    <a href="home.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="projects.html">Projects</a>
+
+    <div class="dropdown">
+        <a href="events.html" class="dropbtn active">Events</a>
+        <div class="dropdown-content">
+            <a href="event-registration.html">Register for Events</a>
+        </div>
+    </div>
+
+    <a href="volunteer.html">Volunteer</a>
+    <a href="donate.html">Donate</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+    <a href="enquiry.html">Enquiry</a>
+</nav>
+
+    <!-- ==============================
+         Main Content
+    ============================== -->
+    <main class="container">
+        <section class="intro">
+            <h2>Support Our Mission</h2>
+            <p>Your donation helps us provide fresh produce, sustain gardens, and teach families how to grow food.
+                Together, we’re cultivating hope and nourishment for our community.</p>
+        </section>
+
+        <section class="donation-form-section">
+            <h3>Make a Donation</h3>
+
+            <form id="donation-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                <label for="amount">Select Donation Amount:</label>
+                <select id="amount" name="amount" required>
+                    <option value="">Choose an amount</option>
+                    <option value="50">R50</option>
+                    <option value="100">R100</option>
+                    <option value="250">R250</option>
+                    <option value="500">R500</option>
+                    <option value="other">Other Amount</option>
+                </select>
+
+                <!-- Hidden by default -->
+                <div id="other-amount-container">
+                    <label for="otherAmount">Enter Amount (R):</label>
+                    <input type="number" id="otherAmount" name="otherAmount" min="10" step="10"
+                        placeholder="e.g., 750">
+                </div>
+
+                <button type="submit">Donate Now</button>
+                <p id="feedback" class="feedback"></p>
+            </form>
+        </section>
+
+        <section class="alt-methods">
+            <h3>Prefer to Donate via EFT?</h3>
+            <p>Bank: <strong>Hope Bank</strong><br>
+                Account Number: <strong>123456789</strong><br>
+                Branch Code: <strong>000123</strong></p>
+            <p>For donation queries, email us at
+                <a href="mailto:info@hopeharvest.org">info@hopeharvest.org</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Hope Harvest Community Garden &mdash;
+        <a href="contact.html">Contact Us</a>
+    </footer>
+
+    <script src="/js-assests/donate.js"></script>
+</body>
+
+</html>

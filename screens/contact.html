@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Hope Harvest Community Garden</title>
+
+  <!-- ✅ SEO -->
+  <meta name="description" content="Get in touch with Hope Harvest Community Garden. We’re here to grow food, community, and hope together.">
+  <meta name="keywords" content="community garden, Hope Harvest, contact, volunteer, Durban, grow food, sustainable living">
+  <meta name="author" content="Hope Harvest Community Garden">
+
+  <!-- ✅ Social Sharing -->
+  <meta property="og:title" content="Contact Hope Harvest Community Garden">
+  <meta property="og:description" content="Reach out to our team for enquiries, volunteering, or donations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsiteurl.com/contact.html">
+  <meta property="og:image" content="https://yourwebsiteurl.com/images/contact-preview.jpg">
+
+  <link rel="stylesheet" href="/css-assests/contact.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Hope Harvest Community Garden</h1>
+    <p>Growing food. Growing community. Growing hope.</p>
+  </header>
+
+  <!-- Navigation -->
+   <nav>
+    <a href="home.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="projects.html">Projects</a>
+
+    <div class="dropdown">
+        <a href="events.html" class="dropbtn active">Events</a>
+        <div class="dropdown-content">
+            <a href="event-registration.html">Register for Events</a>
+        </div>
+    </div>
+
+    <a href="volunteer.html">Volunteer</a>
+    <a href="donate.html">Donate</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+    <a href="enquiry.html">Enquiry</a>
+</nav>
+
+  <!-- Contact Form Section -->
+  <main class="container">
+    <h2>Contact Us</h2>
+    <p class="intro">We’d love to hear from you! Fill out the form below and our team will get back to you soon.</p>
+
+    <form id="contactForm" novalidate aria-label="Contact form">
+      <label for="c_fullname">Full Name:</label>
+      <input type="text" id="c_fullname" name="fullname" placeholder="Your Full Name" required minlength="2" />
+
+      <label for="c_email">Email:</label>
+      <input type="email" id="c_email" name="email" placeholder="you@example.com" required />
+
+      <label for="c_phone">Phone (optional):</label>
+      <input type="tel" id="c_phone" name="phone" placeholder="e.g. 0831234567" pattern="[0-9]{10}" />
+
+      <label for="c_msgtype">Message Type:</label>
+      <select id="c_msgtype" name="type" required>
+        <option value="">-- Select a message type --</option>
+        <option value="general">General Enquiry</option>
+        <option value="volunteer">Volunteer</option>
+        <option value="donation">Donation</option>
+        <option value="feedback">Feedback</option>
+      </select>
+
+      <label for="c_message">Message:</label>
+      <textarea id="c_message" name="message" rows="5" placeholder="Type your message..." required minlength="10"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div id="contactResult" class="form-result" aria-live="polite"></div>
+
+    <!-- Contact Info -->
+    <section class="info">
+      <h3>Get in Touch</h3>
+      <p>Email: <a href="mailto:info@hopeharvest.org">info@hopeharvest.org</a></p>
+      <p>Phone: <a href="tel:+27831234567">+27 83 123 4567</a></p>
+      <p>Location: 3 Swapo Rd, Durban North, 4051</p>
+      <p class="social">
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">Facebook</a> |
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">Instagram</a>
+      </p>
+    </section>
+
+    <!-- Map -->
+    <section class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d1141.7170560620473!2d31.038663990318817!3d-29.784759827562485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d-29.784451278166475!2d31.03819704782624!5e0!3m2!1sen!2sza!4v1761941782991!5m2!1sen!2sza"
+        allowfullscreen loading="lazy" title="Hope Harvest Location"></iframe>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Hope Harvest Community Garden —
+    <a href="contact.html">Contact Us</a>
+  </footer>
+
+  <script src="/js-assests/contact.js"></script>
+</body>
+
+</html>

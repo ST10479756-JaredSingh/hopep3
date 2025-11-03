@@ -1,0 +1,318 @@
+/* ==============================
+   Global Styles
+============================== */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f5f3ed;
+  color: #2d2d2d;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ==============================
+   Header
+============================== */
+header {
+  background: linear-gradient(90deg, #a98467, #4e944f, #a98467);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: rgba(255,255,255,0.1);
+  transform: skewX(-25deg);
+  animation: shimmer 5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { left: -50%; }
+  100% { left: 150%; }
+}
+
+header h1 {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  animation: pulseText 4s infinite;
+}
+
+header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  animation: pulseText 4s infinite;
+}
+
+@keyframes pulseText {
+  0%,100% { transform: scale(1); text-shadow: 2px 2px 6px rgba(0,0,0,0.3); }
+  50% { transform: scale(1.02); text-shadow: 4px 4px 12px rgba(0,0,0,0.4); }
+}
+
+/* ==============================
+   Navigation Menu
+============================== */
+nav {
+  background: #3a5a40;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 3px;
+  background-color: #f0ead6;
+  border-radius: 2px;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+nav a:hover {
+  color: #f0ead6;
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* ==============================
+   Main Container
+============================== */
+.container {
+  max-width: 75%;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #4e944f;
+  text-decoration: underline;
+  font-size: 1.8rem;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Dropdown container */
+nav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+nav .dropbtn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Dropdown content (hidden by default) */
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f5f3ed;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+/* Dropdown links */
+nav .dropdown-content a {
+    color: #2d2d2d;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Hover effect for links */
+nav .dropdown-content a:hover {
+    background-color: #a98467;
+    color: #fff;
+}
+
+/* Show dropdown on hover */
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Optional: change button color on hover */
+nav .dropdown:hover .dropbtn {
+    color: #ffffff;
+}
+
+/* ==============================
+   Form Styles
+============================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #f0ead6;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+label {
+  font-weight: bold;
+  color: #3a5a40;
+}
+
+input, select, textarea {
+  padding: 0.75rem;
+  border: 2px solid #a98467;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #4e944f;
+  box-shadow: 0 0 6px rgba(78, 148, 79, 0.4);
+}
+
+button {
+  background: #4e944f;
+  color: #fff;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #3a5a40;
+  transform: translateY(-3%) scale(1.02);
+}
+
+/* ==============================
+   Result Message
+============================== */
+.form-result {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+  color: #4e944f;
+  transition: opacity 0.3s ease;
+}
+
+/* ==============================
+   Info Section
+============================== */
+.intro {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.info a {
+  color: #4e944f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
+
+.social a {
+  color: #a98467;
+}
+
+/* ==============================
+   Map
+============================== */
+.map iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+/* ==============================
+   Footer
+============================== */
+footer {
+  background: #3a5a40;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ==============================
+   Responsive
+============================== */
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+}

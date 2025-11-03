@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Hope Harvest Community Garden</title>
+
+  <!-- ✅ SEO Meta Tags -->
+  <meta name="description"
+    content="Explore the inspiring community projects at Hope Harvest Community Garden — from youth gardening and composting to sustainability workshops and food drives.">
+  <meta name="keywords"
+    content="community garden projects, Hope Harvest, volunteer, youth gardening, sustainability, composting, food drive, Durban">
+  <meta name="author" content="Hope Harvest Community Garden">
+
+  <!-- ✅ Open Graph Tags -->
+  <meta property="og:title" content="Projects | Hope Harvest Community Garden">
+  <meta property="og:description"
+    content="Explore our community initiatives including garden beds, youth programs, composting, and sustainability workshops.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsiteurl.com/projects.html">
+  <meta property="og:image" content="https://yourwebsiteurl.com/images/projects-preview.jpg">
+
+  <link rel="stylesheet" href="/css-assests/projects.css">
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Hope Harvest Community Garden</h1>
+    <p>Growing food. Growing community. Growing hope.</p>
+  </header>
+
+  <!-- Navigation Menu -->
+   <nav>
+    <a href="home.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="projects.html">Projects</a>
+
+    <div class="dropdown">
+        <a href="events.html" class="dropbtn active">Events</a>
+        <div class="dropdown-content">
+            <a href="event-registration.html">Register for Events</a>
+        </div>
+    </div>
+
+    <a href="volunteer.html">Volunteer</a>
+    <a href="donate.html">Donate</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+    <a href="enquiry.html">Enquiry</a>
+</nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h2>Our Community Projects</h2>
+
+    <div class="accordion">
+
+      <!-- Project 1 -->
+      <div class="project">
+        <button class="accordion-btn">Community Garden Beds</button>
+        <div class="accordion-content">
+          <img src="/_images/communitygardenbedsWEBE.jpg" alt="Community Garden Beds" class="lightbox">
+          <p>Raised vegetable and herb beds, cultivated by volunteers and shared by our neighborhood families.</p>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project">
+        <button class="accordion-btn">Youth Gardening Program</button>
+        <div class="accordion-content">
+          <img src="/_images/youthgardeningprogrammeWEBE.jpg" alt="Youth Gardening Program" class="lightbox">
+          <p>Interactive workshops and school partnerships encouraging the next generation to grow their own food.</p>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project">
+        <button class="accordion-btn">Fruit Tree Orchard</button>
+        <div class="accordion-content">
+          <img src="/_images/fruittreeorchardWEBE.jpg" alt="Fruit Tree Orchard" class="lightbox">
+          <p>We’ve planted over 50 fruit trees — including mango, guava, and lemon — providing free produce to locals.</p>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project">
+        <button class="accordion-btn">Composting Initiative</button>
+        <div class="accordion-content">
+          <img src="/_images/compostinginitiativeWEBE.jpg" alt="Composting Initiative" class="lightbox">
+          <p>Turning organic waste into nutrient-rich compost that sustains our gardens and reduces landfill waste.</p>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project">
+        <button class="accordion-btn">Rainwater Harvesting System</button>
+        <div class="accordion-content">
+          <img src="/_images/rainwaterHarvest .jpg" alt="Rainwater Harvesting" class="lightbox">
+          <p>Collecting and storing rainwater helps us irrigate the garden sustainably during dry months.</p>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="project">
+        <button class="accordion-btn">Sustainability Workshops</button>
+        <div class="accordion-content">
+          <img src="/_images/sustainabilityWorkshops.jpg" alt="Sustainability Workshops" class="lightbox">
+          <p>Monthly workshops teach eco-friendly living — from recycling to solar energy and water conservation.</p>
+        </div>
+      </div>
+
+      <!-- Project 7 -->
+      <div class="project">
+        <button class="accordion-btn">Community Food Drive</button>
+        <div class="accordion-content">
+          <img src="/_images/communityFood.jpg" alt="Community Food Drive" class="lightbox">
+          <p>Partnering with local markets and residents, we donate fresh produce and pantry items to families in need.</p>
+        </div>
+      </div>
+
+      <!-- Project 8 -->
+      <div class="project">
+        <button class="accordion-btn">Butterfly & Bee Habitat</button>
+        <div class="accordion-content">
+          <img src="/_images/butterflyandbeeHabitat.jpg" alt="Butterfly & Bee Habitat" class="lightbox">
+          <p>Dedicated flower beds attract and protect pollinators — vital to the health of our entire ecosystem.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Hope Harvest Community Garden &mdash;
+    <a href="contact.html">Contact Us</a>
+  </footer>
+
+  <!-- ✅ Accordion & Lightbox JS -->
+  <script>
+    // Accordion functionality
+    const accordions = document.querySelectorAll('.accordion-btn');
+    accordions.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.classList.contains('expanded');
+
+        // Close all
+        document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('expanded'));
+        document.querySelectorAll('.accordion-btn').forEach(b => b.classList.remove('active'));
+
+        // Toggle selected
+        if (!isOpen) {
+          btn.classList.add('active');
+          content.classList.add('expanded');
+        }
+      });
+    });
+
+    // Lightbox functionality
+    document.querySelectorAll('.lightbox').forEach(img => {
+      img.addEventListener('click', () => {
+        const overlay = document.createElement('div');
+        overlay.classList.add('lightbox-overlay');
+
+        const lightboxImg = document.createElement('img');
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+
+        overlay.appendChild(lightboxImg);
+        document.body.appendChild(overlay);
+
+        overlay.addEventListener('click', () => overlay.remove());
+      });
+    });
+  </script>
+</body>
+
+</html>

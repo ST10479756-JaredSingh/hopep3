@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Registration | Hope Harvest Community Garden</title>
+  <link rel="stylesheet" href="/css-assests/event-registration.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Hope Harvest Community Garden</h1>
+    <p>Growing food. Growing community. Growing hope.</p>
+  </header>
+
+  <!-- Navigation -->
+   <nav>
+    <a href="home.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="projects.html">Projects</a>
+
+    <div class="dropdown">
+        <a href="events.html" class="dropbtn active">Events</a>
+        <div class="dropdown-content">
+            <a href="event-registration.html">Register for Events</a>
+        </div>
+    </div>
+
+    <a href="volunteer.html">Volunteer</a>
+    <a href="donate.html">Donate</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+    <a href="enquiry.html">Enquiry</a>
+</nav>
+
+  <!-- Main Container -->
+  <div class="container">
+    <h2>Event Registration</h2>
+    <p>Select an event below to register:</p>
+
+    <form id="registration-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required placeholder="Your full name">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Optional">
+
+      <label for="event">Select Event</label>
+      <select id="event" name="event">
+        <option value="Spring Planting Day">Spring Planting Day</option>
+        <option value="Composting 101 Workshop">Composting 101 Workshop</option>
+        <option value="Annual Harvest Festival">Annual Harvest Festival</option>
+        <option value="Community Gardening Workshop">Community Gardening Workshop</option>
+        <option value="End-of-Season Harvest Party">End-of-Season Harvest Party</option>
+        <option value="Winter Seed Prep">Winter Seed Prep</option>
+        <option value="Community Garden Tour">Community Garden Tour</option>
+        <option value="Holiday Plant Swap">Holiday Plant Swap</option>
+        <option value="New Year Garden Prep">New Year Garden Prep</option>
+      </select>
+
+      <label for="message">Message / Questions</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your message here..."></textarea>
+
+      <button type="submit">Register</button>
+      <div class="feedback" id="feedback"></div>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Hope Harvest Community Garden — <a href="contact.html">Contact Us</a>
+  </footer>
+
+  <script src="/js-assests/event-registration.js"></script>
+</body>
+</html>

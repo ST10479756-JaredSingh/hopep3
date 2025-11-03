@@ -1,0 +1,321 @@
+/* ============================== 
+   Global Styles 
+============================== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f5f3ed;
+    color: #2d2d2d;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* ============================== 
+   Header Styles 
+============================== */
+header {
+    background: linear-gradient(90deg, #a98467, #4e944f, #a98467);
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: rgba(255,255,255,0.1);
+    transform: skewX(-25deg);
+    animation: shimmer 5s infinite linear;
+}
+
+@keyframes shimmer {
+    0% { left: -50%; }
+    100% { left: 150%; }
+}
+
+header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    animation: pulseText 4s infinite;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    animation: pulseText 4s infinite;
+}
+
+@keyframes pulseText {
+    0%,100% { transform: scale(1); text-shadow: 2px 2px 6px rgba(0,0,0,0.3); }
+    50% { transform: scale(1.02); text-shadow: 4px 4px 12px rgba(0,0,0,0.4); }
+}
+
+/* ============================== 
+   Navigation Menu 
+============================== */
+nav {
+    background: #3a5a40;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0.8rem 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 80%;
+    height: 3px;
+    background-color: #f0ead6;
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+nav a:hover {
+    color: #f0ead6;
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* Dropdown container */
+nav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+nav .dropbtn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Dropdown content (hidden by default) */
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f5f3ed;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+/* Dropdown links */
+nav .dropdown-content a {
+    color: #2d2d2d;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Hover effect for links */
+nav .dropdown-content a:hover {
+    background-color: #a98467;
+    color: #fff;
+}
+
+/* Show dropdown on hover */
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Optional: change button color on hover */
+nav .dropdown:hover .dropbtn {
+    color: #ffffff;
+}
+
+/* ============================== 
+   Main Container 
+============================== */
+.container {
+    max-width: 75%;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #4e944f;
+    text-decoration: underline;
+    font-size: 1.8rem;
+}
+
+/* ============================== 
+   Accordion Styles 
+============================== */
+.accordion {
+    margin-top: 10px;
+}
+
+.accordion-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #a98467, #4e944f);
+    color: white;
+    cursor: pointer;
+    padding: 15px 18px;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.accordion-btn:hover {
+    background: linear-gradient(135deg, #4e944f, #386641);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.accordion-btn.active {
+    background: linear-gradient(135deg, #4e944f, #386641);
+}
+
+/* Accordion Animation */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #f5f3ed;
+    border-radius: 6px;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    margin-top: 5px;
+    padding: 0 18px;
+}
+
+.accordion-content.expanded {
+    padding: 15px 18px;
+    max-height: 2000px;
+}
+
+.accordion-content p {
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-top: 10px;
+    text-align: center;
+    color: #2d2d2d;
+}
+
+/* ============================== 
+   Project Images 
+============================== */
+.accordion-content img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.accordion-content img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================== 
+   Lightbox Overlay 
+============================== */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: zoom-out;
+}
+
+.lightbox-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+/* ============================== 
+   Footer 
+============================== */
+footer {
+    background: #3a5a40;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ============================== 
+   Responsive Adjustments 
+============================== */
+@media (max-width: 60rem) {
+    .container {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    nav a {
+        flex: 1;
+        text-align: center;
+        font-size: 1rem;
+        padding: 0.75rem 0;
+    }
+
+    .accordion-content img {
+        width: 90%;
+    }
+}

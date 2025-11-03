@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta -->
+  <title>About Us | Hope Harvest Community Garden</title>
+  <meta name="description"
+    content="Learn about Hope Harvest Community Garden, our mission, team, and commitment to sustainability and community empowerment.">
+  <meta name="keywords"
+    content="community garden, sustainability, food security, volunteer, education, Hope Harvest, environment">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/css-assests/aboutus.css">
+</head>
+
+<body>
+  <header>
+    <h1>Hope Harvest Community Garden</h1>
+    <p>Growing food. Growing community. Growing hope.</p>
+  </header>
+
+   <nav>
+    <a href="home.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="projects.html">Projects</a>
+
+    <div class="dropdown">
+        <a href="events.html" class="dropbtn active">Events</a>
+        <div class="dropdown-content">
+            <a href="event-registration.html">Register for Events</a>
+        </div>
+    </div>
+
+    <a href="volunteer.html">Volunteer</a>
+    <a href="donate.html">Donate</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+    <a href="enquiry.html">Enquiry</a>
+</nav>
+
+  <main class="container">
+    <h2>About Us</h2>
+
+    <!-- Accordion Section: History & Mission -->
+    <button class="accordion">Our History</button>
+    <div class="accordion-content">
+      <p>Founded in 2018, Hope Harvest Community Garden began as a small group of neighbors passionate about food
+        security and sustainability. Over the years, we have grown into a thriving non-profit organization, providing
+        fresh produce to low-income residents and empowering our community through education.</p>
+    </div>
+
+    <button class="accordion">Our Mission</button>
+    <div class="accordion-content">
+      <p>Our mission is to cultivate sustainable gardens that nourish both people and the planet. We aim to educate our
+        community and reduce food insecurity one harvest at a time.</p>
+    </div>
+
+    <!-- Core Values Accordion Heading -->
+    <button class="accordion core-values-accordion">🌱 Our Core Values</button>
+    <div class="accordion-content core-values-content">
+      <div class="values-grid">
+        <div class="card">
+          <img src="/_images/communityWEBE.jpg" alt="Community" class="lightbox-img">
+          <h4>Community</h4>
+          <p>We grow together — uniting neighbors to nurture our garden and our shared sense of belonging.</p>
+        </div>
+
+        <div class="card">
+          <img src="/_images/sustainabilityWEBE.jpg" alt="Sustainability" class="lightbox-img">
+          <h4>Sustainability</h4>
+          <p>We practice eco-friendly methods that ensure a greener, healthier planet for generations to come.</p>
+        </div>
+
+        <div class="card">
+          <img src="/_images/educationWEBE.jpg" alt="Education" class="lightbox-img">
+          <h4>Education</h4>
+          <p>We empower our community through learning — from seed planting to environmental awareness.</p>
+        </div>
+
+        <div class="card">
+          <img src="/_images/volunteerism.jpg" alt="Volunteerism" class="lightbox-img">
+          <h4>Volunteerism</h4>
+          <p>Our hands shape the garden — every volunteer makes a lasting difference in our collective harvest.</p>
+        </div>
+
+        <div class="card">
+          <img src="/_images/nutrition.jpg" alt="Nutrition" class="lightbox-img">
+          <h4>Nutrition</h4>
+          <p>We promote healthy living through access to fresh, organic produce straight from the garden.</p>
+        </div>
+
+        <div class="card">
+          <img src="/_images/inclusivity.jpg" alt="Inclusivity" class="lightbox-img">
+          <h4>Inclusivity</h4>
+          <p>Everyone is welcome — we celebrate diversity, respect differences, and work toward shared growth.</p>
+        </div>
+
+        <div class="card">
+          <img src="/_images/stewardship .jpg" alt="Stewardship" class="lightbox-img">
+          <h4>Stewardship</h4>
+          <p>We care for the earth and our resources with gratitude and responsibility.</p>
+        </div>
+
+        <div class="card">
+          <img src="/_images/innovation .jpg" alt="Innovation" class="lightbox-img">
+          <h4>Innovation</h4>
+          <p>We embrace creativity and new techniques to improve sustainability and community impact.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+      <span class="close-lightbox" id="closeLightbox">&times;</span>
+      <img id="lightboxImage" src="" alt="Expanded gallery image">
+    </div>
+
+    <!-- Google Map -->
+    <section class="map">
+      <h3>Where to Find Us</h3>
+      <p>Location: 3 Swapo Rd, Durban North, 4051</p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d1141.7170560620473!2d31.038663990318817!3d-29.784759827562485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d-29.784451278166475!2d31.03819704782624!5e0!3m2!1sen!2sza!4v1761941782991!5m2!1sen!2sza"
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form">
+      <h3>Contact Us</h3>
+      <form id="contactForm" action="mailto:info@hopeharvest.org" method="POST" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your message..." required></textarea>
+
+        <button type="submit">Send</button>
+        <button type="button" id="clearBtn">Clear</button>
+        <p id="feedbackMsg" class="feedback"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Hope Harvest Community Garden &mdash;
+    <a href="contact.html">Contact Us</a>
+  </footer>
+
+  <script src="/js-assests/aboutus.js"></script>
+</body>
+
+</html>

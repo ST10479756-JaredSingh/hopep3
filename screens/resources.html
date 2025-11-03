@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources | Hope Harvest Community Garden</title>
+  <link rel="stylesheet" href="/css-assests/resources.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Hope Harvest Community Garden</h1>
+    <p>Growing food. Growing community. Growing hope.</p>
+  </header>
+
+  <!-- Navigation -->
+   <nav>
+    <a href="home.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="projects.html">Projects</a>
+
+    <div class="dropdown">
+        <a href="events.html" class="dropbtn active">Events</a>
+        <div class="dropdown-content">
+            <a href="event-registration.html">Register for Events</a>
+        </div>
+    </div>
+
+    <a href="volunteer.html">Volunteer</a>
+    <a href="donate.html">Donate</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+    <a href="enquiry.html">Enquiry</a>
+</nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <h2>Community Gardening Resources</h2>
+    <p class="intro">
+      Explore our collection of free resources to help you grow healthy produce and a stronger community.
+      Use the filters below to find what you need!
+    </p>
+
+    <!-- Search & Filter -->
+    <div class="filter-bar">
+      <input type="text" id="searchInput" placeholder="Search resources...">
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="guides">Guides</option>
+        <option value="videos">Videos</option>
+        <option value="infographics">Infographics</option>
+        <option value="faq">FAQ</option>
+      </select>
+    </div>
+
+    <!-- Resource Cards -->
+    <div class="resources-grid" id="resourcesList">
+      <div class="resource-card" data-category="faq" data-keywords="faq questions help answers">
+        <img src="/_images/83c4f044-e955-494b-8b14-c37740185e5b.jpg" alt="FAQ">
+        <h3>❓ Gardening FAQ</h3>
+        <p>Answers to the most common gardening and sustainability questions.</p>
+        <button class="download-btn" data-resource="FAQ">Request Access</button>
+      </div>
+
+      <div class="resource-card" data-category="videos" data-keywords="video composting organic pest">
+        <img src="/_images/f7b5883a-b513-471c-900d-cb4d98ae816c.jpg" alt="Video Tutorials">
+        <h3>🎥 Gardening Video Tutorials</h3>
+        <p>Short, easy-to-follow videos covering composting, pest control, and organic methods.</p>
+        <button class="download-btn" data-resource="Video Tutorials">Request Access</button>
+      </div>
+
+      <div class="resource-card" data-category="guides" data-keywords="beginner soil planting">
+        <img src="/_images/d3755c74-48d5-4c5a-b1e4-d71ba372319a.jpg" alt="Beginner's Guide">
+        <h3>🌱 Beginner’s Gardening Guide</h3>
+        <p>Step-by-step guide to soil preparation, planting, and harvesting your first crops.</p>
+        <button class="download-btn" data-resource="Beginner's Gardening Guide">Request Access</button>
+      </div>
+    </div>
+
+    <!-- Gardening Tips -->
+    <section class="tips">
+      <h2>🌿 Gardening Tips of the Month</h2>
+      <ul>
+        <li>🌼 Use crushed eggshells to add calcium to your soil and deter snails.</li>
+        <li>💧 Water early in the morning to prevent fungal growth.</li>
+        <li>🌸 Plant marigolds near vegetables to naturally repel pests.</li>
+      </ul>
+    </section>
+
+    <!-- Contact Prompt -->
+    <div class="contact-prompt">
+      <p>Want full access to our growing library of resources?
+        <a href="contact.html">Contact us</a> to request free access!</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Hope Harvest Community Garden &mdash;
+    <a href="contact.html">Contact Us</a>
+  </footer>
+
+  <script src="/js-assests/resources.js"></script>
+</body>
+
+</html>
